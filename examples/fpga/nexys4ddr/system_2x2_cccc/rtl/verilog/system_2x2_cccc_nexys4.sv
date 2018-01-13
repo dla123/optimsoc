@@ -166,8 +166,8 @@ module system_2x2_cccc_nexys4
       );
 
    // Single compute tile with all memory mapped to the DRAM
-   system_2x2_cccc_dm
-      #(.CONFIG(CONFIG))
+   system_allct
+      #(.CONFIG(CONFIG), .XDIM(2), .YDIM(2))
    u_system
      (
       .clk           (sys_clk),

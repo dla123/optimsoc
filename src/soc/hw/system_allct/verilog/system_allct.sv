@@ -30,7 +30,7 @@
 
 
 module system_allct
-   import optimsoc::*;   
+   import optimsoc::*;
    import dii_package::dii_flit;
    #(parameter config_t CONFIG = 'x,
      parameter HOST_TILE = 0,
@@ -38,7 +38,7 @@ module system_allct
      parameter YDIM = 1,
      localparam NODES = XDIM*YDIM)
    (
-    input 	      clk, rst,
+    input             clk, rst,
     glip_channel      c_glip_in,
     glip_channel      c_glip_out,
 
@@ -121,8 +121,7 @@ module system_allct
             #(.CONFIG (CONFIG),
               .ID(i),
               .COREBASE(i*CONFIG.CORES_PER_TILE),
-              .DEBUG_BASEID(2 + i*CONFIG.DEBUG_MODS_PER_TILE + ((i!=0) ? HOST_TILE : 0)),
-              .ENABLE_UART ((i==0) ? HOST_TILE : 0))
+              .DEBUG_BASEID(2 + i*CONFIG.DEBUG_MODS_PER_TILE + ((i!=0) ? HOST_TILE : 0)))
          u_ct(.clk                        (clk),
               .rst_cpu                    (rst_cpu),
               .rst_sys                    (rst_sys),

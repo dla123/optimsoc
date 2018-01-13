@@ -258,8 +258,8 @@ module system_2x2_cccc_vcu108
 
 
    // 2x2 distributed memory system with all memory mapped to DDR
-   system_2x2_cccc_dm
-      #(.CONFIG(CONFIG))
+   system_allct
+      #(.CONFIG(CONFIG), .XDIM(2), .YDIM(2))
       u_system
       (
          .clk           (sys_clk_50),

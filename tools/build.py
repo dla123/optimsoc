@@ -494,16 +494,16 @@ def build_examples_sim(options, env):
         "files": [ "build/optimsoc_examples_compute_tile_sim_0/sim-verilator/Vtb_compute_tile" ],
         "options": "--NUM_CORES 4" },
 
-      { "name": "system_2x2_cccc_sim",
-        "outname": "system_2x2_cccc_sim_dualcore",
-        "path": "system_2x2_cccc",
-        "files": [ "build/optimsoc_examples_system_2x2_cccc_sim_0/sim-verilator/Vtb_system_2x2_cccc" ],
-        "options": "--NUM_CORES 2"},
-      { "name": "system_2x2_cccc_sim",
+      { "name": "system_allct_sim",
+        "outname": "system_2x2_sim_dualcore",
+        "path": "system_allct",
+        "files": [ "build/optimsoc_examples_system_allct_sim_0/sim-verilator/Vtb_system_allct" ],
+        "options": "--XDIM 2 --YDIM 2 --NUM_CORES 2" },
+      { "name": "system_allct_sim",
         "outname": "system_2x2_cccc_sim_dualcore_debug",
-        "path": "system_2x2_cccc",
-        "files": [ "build/optimsoc_examples_system_2x2_cccc_sim_0/sim-verilator/Vtb_system_2x2_cccc" ],
-        "options": "--NUM_CORES 2 --USE_DEBUG 1"},
+        "path": "system_allct",
+        "files": [ "build/optimsoc_examples_system_allct_sim_0/sim-verilator/Vtb_system_allct" ],
+        "options": "--XDIM 2 --YDIM 2 --NUM_CORES 2 --USE_DEBUG 1"},
     ]
 
     for ex in examples:
